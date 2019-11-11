@@ -23,6 +23,25 @@ $("#addburger").on("click", function(event){
     );
 });
 
-//Send the PUT request
+//When the user clicks devour, UPDATE the data and refresh the page to display it correctly
+$(".burger-devour").on("click", function(event){
+    var id = $(this).data("id");
+    console.log(id);
+    var newDevour = {
+        devoured: true
+    }
+
+$.ajax("/api/burgers/" + id, {
+    type: "PUT",
+    data: newDevour
+}).then(
+    function(){
+        console.log("changed burger status to " + newDevour);
+        //reload the page
+        location.reload();
+    }
+);
+
+});//end of click event
 
 });//end of initial function
