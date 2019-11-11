@@ -4,12 +4,25 @@
   <hr class="my-4">
 </div>
 
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
 
-<ul>
-  {{#each burgers}}
-    <div class="row">{{burger_name}}</div>
-  {{/each}}
-</ul>
+        <ol id="burgerlist">
+          
+            {{#each burgers}}
+              <div class="card my-3 py-3 px-4">
+                <li>
+                  {{burger_name}}
+                </li>
+              </div>
+            {{/each}}
+        
+        </ol>
+
+    </div>
+  </div>
+</div>
 
 <div class="container bg-light p-2">
     <div class="row">
