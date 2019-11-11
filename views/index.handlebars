@@ -6,6 +6,7 @@
 
 <div class="container">
   <div class="row">
+    {{!-- The list of burgers that are waiting to be devoured --}}
     <div class="col-md-6">
 
         <ol id="burgerlist">
@@ -16,13 +17,32 @@
                   <li>
                     {{burger_name}}
                   </li>
-                {{/unless}}
                 </div>
+              {{/unless}}
             {{/each}}
         
         </ol>
 
     </div>
+    {{!-- The list of burgers that have been devoured --}}
+    <div class="col-md-6">
+
+      <ol id="burgerlist">
+        
+          {{#each burgers}}
+            {{#if devoured}}
+              <div class="card my-3 py-3 px-4">
+                <li>
+                  {{burger_name}}
+                </li>
+              </div>
+            {{/if}}
+          {{/each}}
+      
+      </ol>
+
+    </div>
+
   </div>
 </div>
 
