@@ -1,22 +1,17 @@
-<h1>Bugers!</h1>
+<div class="jumbotron" id="title-jumbo">
+  <h1 class="display-4 font-weight-bold" id="grand">Eat-Da-Burger</h1>
+  <p class="lead" id="subtitle">They're juicy and delicious! Tell us about your burgers. Devour some burgers.</p>
+  <hr class="my-4">
+</div>
 
-<h2>They're so tasty and fantastic! Tell us all about your burgers!</h2>
 
 <ul>
-  {{#each cats}}
-    {{#unless sleepy}}
-      {{> cats/cat-block sleep=true}}
-    {{/unless}}
+  {{#each burgers}}
   {{/each}}
 </ul>
 
-<h2>Cats that are sleepy!</h2>
-
 <ul>
-  {{#each cats}}
-    {{#if sleepy}}
-      {{> cats/cat-block sleep=false}}
-    {{/if}}
+  {{#each burgers}}
   {{/each}}
 </ul>
 
